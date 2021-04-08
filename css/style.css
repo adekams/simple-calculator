@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* calculator body */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+    background: #123;
+}
+
+.calculator {
+    position: relative;
+    width: 300px;
+    height: 520px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    background-color: #ecf0f3;
+}
+
+/* calculator display */
+.calculator-display {
+    height: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+#history-value {
+    color: grey;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.output {
+    max-width: 90%;
+}
+
+#output-value {
+    font-size: 40px;
+    font-weight: bold;
+    color: #242424;
+    overflow-x: auto;
+}
+
+#output-value::-webkit-scrollbar {
+    height: 3px;
+    width: 1px;
+    background: #e0dede;
+}
+
+#output-value::-webkit-scrollbar-thumb {
+    max-width: 5px;
+    height: 20px;
+    background: #ecf0f3;
+}
+
+/* calculator keyboard */
+.calculator-keyboard {
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 15px;
+}
+
+button {
+    border: 1px solid #ccc;
+    background: #ddd;
+    box-shadow: -5px -5px 10px #bbb, 5px 5px 0px #fff;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.operator, #equals {
+    background: rgb(12, 27, 168);
+    border: transparent;
+    box-shadow: -5px -5px 10px #bbb, 5px 5px 0px #fff;
+    font-size: 22px;
+    color: #fff;
+}
+
+#clear {
+    background: rgba(248, 3, 3, 0.836);
+    color: #fff;
+}
+
+button:nth-child(1), button:nth-child(2) {
+    font-size: 16px;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    box-shadow: inset 1px 0 1px #c4c4c4;
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+#zero {
+    grid-column-start:1;
+    grid-column-end: 3;
+}
+
+
+
+#equals {
+    grid-column:4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.btn-active {
+    opacity: .8;
+}
+
+/* footer */
+.footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+}
+footer a {
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .calculator {
+       width: 500px;
+        height: 800px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .calculator {
+        max-width: 400px;
+        height: 600px;
+    }
+}
